@@ -189,6 +189,32 @@ return false;
 });
 ```
 
+#### Banner의 적응형 디자인 구현을 위한 window width
+IE8 이하의 환경에서는 적응형 단위인 viewport등을 사용하지 못하므로, 창의 width를 구하기 위해 window.innerWidth를 사용했습니다.
+모든 브라우저의 환경에 대응하기 위해 polyfill을 추가하였고,
+```js
+var windowidth = window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+```
+attachEvent onresize와 addEventListener resize로 windowidth를 갱신하였습니다.
+```js
+if (window.attachEvent) {
+  window.attachEvent("onresize", function () {
+    windowidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    BANNER();
+  });
+} else {
+  window.addEventListener(
+    "resize",
+    function () {
+      windowidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      BANNER();
+    },
+    false
+  );
+}
+```
 <br/>
 
 ## 프로젝트 후기
