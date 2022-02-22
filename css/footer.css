@@ -189,14 +189,15 @@ address {
 
 .FooterContact .FooterF {
   font-weight: 300;
-  margin: 0 0 0 20px;
+  margin:0;
+  margin-left: 20px;
   display: block;
   float: left;
 }
 
 .FooterContact .FooterS {
   font-size: 14px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
   color: #9b9b9b;
   display: block;
   float: left;
@@ -227,9 +228,6 @@ address {
   letter-spacing: -0.2px;
   margin-top: 12px;
   margin-left: 17px;
-}
-
-.FooterFaq > a {
   font-size: 13px;
   height: 36px;
 }
@@ -299,7 +297,6 @@ address {
   position: absolute;
   bottom: 82px;
   right: 0;
-  color: #f7f7f7;
 }
 
 .FooterTems > a {
@@ -308,31 +305,30 @@ address {
   font-weight: 200;
   letter-spacing: -0.21px;
   float: left;
-  display: block;
   color: #f7f7f7;
-  margin: 0 0 0 25px;
+  margin-left: 25px;
 }
 
 @media (max-width: 1140px) {
-  .FooterLogo {
+  .FooterAbout .FooterLogo {
     display: none;
   }
 }
 
 @media (max-width: 1024px) {
-  .FooterWarp {
+  .Footer .FooterWarp {
     max-width: 1212px;
     padding: 0 10px;
     margin: 0 auto;
   }
 
-  .FooterSns {
+  .FooterInner .FooterSns {
     margin-left: -10px;
     position: relative;
     display: block;
   }
 
-  .FooterSns > a {
+  .FooterInner .FooterSns > a {
     padding: 0;
     margin: 0;
     border: none;
@@ -344,7 +340,7 @@ address {
     height: 44px;
   }
 
-  .FooterSns > a:before {
+  .FooterInner .FooterSns > a:before {
     content: "";
     display: block;
     background-size: 626px 422.5px;
@@ -353,12 +349,12 @@ address {
     background-position: -575px -306px;
   }
 
-  .FooterSns > *:first-child + *,
-  .FooterSns > *:first-child + * + * {
+  .FooterInner .FooterSns > *:first-child + *,
+  .FooterInner .FooterSns > *:first-child + * + * {
     margin-left: 0;
   }
 
-  .FooterSns > a:before {
+  .FooterInner .FooterSns > a:before {
     content: "";
     background-image: url(https://kukka-2-media-123.s3.amazonaws.com/static/kukkart_new/img/sprite/kukka.png);
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='url(https://kukka-2-media-123.s3.amazonaws.com/static/kukkart_new/img/sprite/kukka.png)', sizingMethod='scale');
@@ -367,18 +363,19 @@ address {
     height: 24px;
     display: block;
     background-size: 626px 422.5px;
-    margin: 10px 0 0 10px;
+    margin-top: 10px;
+    margin-left: 10px;
   }
 
-  .FooterSns > *:first-child:before {
+  .FooterInner .FooterSns > *:first-child:before {
     background-position: -575px -306px;
   }
 
-  .FooterSns > *:first-child + *:before {
+  .FooterInner .FooterSns > *:first-child + *:before {
     background-position: -256px -306px;
   }
 
-  .FooterSns > *:first-child + * + *:before {
+  .FooterInner .FooterSns > *:first-child + * + *:before {
     width: 33px;
     background-position: -218px -306px;
   }
@@ -413,7 +410,8 @@ address {
   .FooterContact .FooterS {
     clear: both;
     display: block;
-    margin: 5px 0 0 0;
+    margin:0;
+    margin-top: 5px;
     font-size: 12px;
     line-height: 18px;
     float: left;
@@ -482,10 +480,10 @@ address {
   }
 
   .FooterTems > *:first-child + * {
-    margin: 0 0 0 30px;
+    margin-left:30px;
   }
 
   .FooterTems > *:first-child + * + * {
-    margin: 0 0 0 30px;
+    margin-left:30px;
   }
 }
